@@ -32,7 +32,7 @@ def monitor_disk(disk, limit):
         ("percent", int(disk_usage.percent)),
     ))
 
-    log = '\nhost:{host}\ntotal:{total}GB\nused:{used}GB\nfree:{free}GB\npercent:{percent}%'.format(**usage)
+    log = '\nhost\t{host}\ntotal\t{total}GB\nused\t{used}GB\nfree\t{free}GB\npercent\t{percent}%'.format(**usage)
 
     if eval(limit.format(**usage)):
         # 超过显示，进行 warning
