@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Project
+kwargs.json
+.idea/
+disk_limit.json
+logging.conf
