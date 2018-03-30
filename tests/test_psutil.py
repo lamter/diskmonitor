@@ -10,11 +10,14 @@ def test_disk_partitions():
 def test_disk_usage():
     disk_usage = psutil.disk_usage('/')
     print(disk_usage.total / 1000 / 1000 / 1000)
-    disk_usage.used
-    disk_usage.free
-    disk_usage.percent
+
 
 
 def test_disk_io_counters():
     sdiskio = psutil.disk_io_counters()
     print(sdiskio)
+
+
+
+def test_judge():
+    
