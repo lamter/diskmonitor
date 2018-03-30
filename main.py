@@ -26,13 +26,14 @@ def monitor_disk(disk, limit):
 
     usage = OrderedDict((
         ("host", HOST),
+        ("disk", disk),
         ("total", to_GB(disk_usage.total)),
         ("used", to_GB(disk_usage.used)),
         ("free", to_GB(disk_usage.free)),
         ("percent", int(disk_usage.percent)),
     ))
 
-    log = '\nhost\t{host}\ntotal\t{total}GB\nused\t{used}GB\nfree\t{free}GB\npercent\t{percent}%'.format(**usage)
+    log = '\nhost\t{host}\ndisk\t{disk}\ntotal\t{total}GB\nused\t{used}GB\nfree\t{free}GB\npercent\t{percent}%'.format(**usage)
 
     if eval(limit.format(**usage)):
         # 超过显示，进行 warning
